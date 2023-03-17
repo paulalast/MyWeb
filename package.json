@@ -654,6 +654,7 @@
     "supports-color": "^7.2.0",
     "sver-compat": "^1.5.0",
     "svgo": "^0.7.2",
+    "swiper": "^9.0.5",
     "symbol-observable": "^1.0.1",
     "tar-stream": "^1.6.2",
     "temp-dir": "^1.0.0",

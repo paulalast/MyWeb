@@ -1,33 +1,20 @@
-$dark-pink: #5f0a19;
-$grey: #f8f9fa;
-$light-pink: #e2c1be;
-$pure-white: #fff;
-$dark: #000;
-$purple: #151635;
-$main: #040827;
-
-$dark-gold: #cdbb7e;
-$dark-rose: #884c5e;
 $blue-gradient-solid: linear-gradient(40deg, #000000, #07164967);
 $nav-gradient-solid: linear-gradient(
-	90deg,
-	rgba(255, 255, 255, 1) 50%,
-	rgb(233, 232, 230) 100%
+	150deg,
+	rgba(255, 255, 255, 1) 20%,
+	rgb(201, 198, 193) 100%
 );
-$grey: #10112c07;
-$black-gradient: linear-gradient(
-	200deg,
-	rgba(0, 0, 0, 0.7) 100%,
-	rgba(0, 0, 0, 1) 100%
-);
-$gold-gradient: linear-gradient(
-	320deg,
-	rgba(208, 185, 126, 1) 34%,
-	rgba(204, 185, 126, 0.74) 80%
-);
+$black-gradient: linear-gradient(0deg, #000000ed, #07164967);
+$black-gradient: linear-gradient(40deg, #000000, #07164967);
 
-$white: linear-gradient(
-	320deg,
-	rgba(241, 239, 233, 0.13) 34%,
-	rgba(27, 26, 23, 0.096) 80%
-);
+$pure-white: #fff;
+$dark: #0e1f2a;
+$extra: #b58c67;
+$extraLight: #ceb996;
+$bg-color: #fff;
+$text-dark: #0e1f2a;
+$text-light: #fff;
+$bg-color-dark: #292a32;
+$bg-color-dark: #1a1c27;
+$popup-box-shadow-color: rgba(181, 140, 103, 0.9);
+$black-shadow: rgba(14, 31, 42, 0.5);
