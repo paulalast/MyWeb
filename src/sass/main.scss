@@ -12,6 +12,7 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	text-decoration: none;
 }
 p,
 input,
@@ -24,7 +25,7 @@ a {
 	text-decoration: none;
 }
 h2 {
-	font-weight: 300;
+	font-weight: 400;
 }
 body {
 	display: flex;
@@ -52,6 +53,9 @@ body {
 		rgba(255, 255, 255, 1) 100%
 	);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ececec",endColorstr="#ffffff",GradientType=1);
+	a {
+		text-decoration: none;
+	}
 }
 main {
 	display: flex;
@@ -144,6 +148,7 @@ section {
 
 	&--active {
 		transform: translateX(0);
+		text-decoration: none;
 	}
 
 	&__item {
@@ -162,7 +167,7 @@ section {
 			width: 4px;
 			height: 100%;
 			transform: scaleY(0);
-			background-color: $pure-white;
+			background-color: $text-dark;
 
 			transition: transform 0.3s;
 			content: "";
@@ -175,30 +180,31 @@ section {
 	&__item:hover {
 		color: $text-dark;
 	}
+	a:hover {
+		text-decoration: none;
+	}
 }
 
 .nav-items-animation {
 	animation: navItemsAnimation 1s both;
 }
-.black-bars-color,
-.black-bars-color::after,
-.black-bars-color::before {
-	background-color: $pure-white;
+.white-bars-color,
+.white-bars-color::after,
+.white-bars-color::before {
+	background-color: $extra;
 }
 
 .header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	text-align: center;
 	justify-content: center;
 	height: 90vh;
 	min-width: 100vw;
 	padding: 2em;
 	color: $text-light;
 	background-attachment: scroll;
-	@include heroImages2("./../../dist/img/headerXS.webp");
-	overflow-x: hidden;
+	background-image: url("./../../dist/img/headerXS.webp");
 
 	&__heading {
 		position: relative;
@@ -211,7 +217,6 @@ section {
 		overflow: hidden;
 		white-space: wrap;
 		margin: 0 auto;
-		letter-spacing: 0.15em;
 		opacity: 0;
 		animation: fadeIn 2s ease-in-out forwards;
 		text-align: center;
@@ -255,9 +260,7 @@ section {
 			left: 0;
 			width: 110%;
 			height: 110%;
-			color: $text-light;
 			background-color: $extra;
-			opacity: 1;
 			border-radius: 3px;
 		}
 
@@ -268,14 +271,15 @@ section {
 
 			&:hover {
 				color: $text-light;
+				text-decoration: none;
 			}
 		}
 	}
 
 	&__btn:hover {
 		color: $text-light;
+		text-decoration: none;
 		z-index: 10;
-
 		&::before {
 			opacity: 1;
 		}
@@ -286,6 +290,7 @@ section {
 	position: relative;
 	z-index: 0;
 	color: $text-dark;
+	text-decoration: none;
 	overflow: hidden;
 	transition: background-color 0.1s, color 0.5s;
 
@@ -306,7 +311,14 @@ section {
 	&:hover::before {
 		transform: scaleX(1);
 		transform-origin: left;
+	}
+
+	&:hover {
 		color: $text-light;
+
+		a {
+			text-decoration: none;
+		}
 	}
 }
 
@@ -335,23 +347,17 @@ section {
 		top: -20px;
 		left: 40px;
 		border-radius: 3px;
+		background: #d9d9d944;
+		padding: 1.5em;
 		img {
 			position: relative;
 			max-width: min-content;
 			height: max-content;
-			filter: saturate(0);
-			justify-content: center;
-			transition: transform 0.4s ease-in-out, filter 1s ease-in-out;
+			object-fit: cover;
+			filter: saturate(0.7);
 			border: outset 0px solid $dark;
 			border-radius: 3px;
-			// border-bottom: outset 30px solid white;
-			object-fit: cover;
 			box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.425);
-			transform: rotateY(-3deg);
-		}
-
-		img:hover {
-			filter: saturate(1);
 		}
 	}
 
@@ -360,23 +366,21 @@ section {
 		flex-direction: column;
 		position: relative;
 		margin-left: 5em;
-		height: 100%;
+		max-height: 100%;
 		max-width: 43em;
 		overflow: hidden;
-		letter-spacing: 0.08em;
 		text-align: justify;
+		letter-spacing: 0.08em;
 		margin-top: 0px;
 		margin-bottom: 4em;
-		background-color: $bg-color;
-		border-radius: 3px;
-		box-shadow: 10px 10px 12px rgb(255, 255, 255);
 
 		&-title {
 			display: flex;
 			justify-content: center;
 			justify-self: start;
-			font-size: 2.8em;
-			font-weight: 300;
+			font-size: 2em;
+			font-weight: 900;
+			letter-spacing: 0.2em;
 			text-transform: uppercase;
 			margin: 0.5em;
 		}
@@ -385,14 +389,13 @@ section {
 			display: block;
 			padding: 2em;
 			margin: 1em;
-			border: 1px solid rgba(255, 255, 255, 0.89);
-			background-color: $bg-color;
-			border-radius: 3px;
 			text-indent: 1.5em;
+			border-radius: 3px;
 			color: $text-dark;
 			font-family: "Lato", sans-serif;
 			font-size: 1.2em;
 			line-height: 1.3em;
+			border-radius: 3px;
 
 			strong {
 				color: $extra;
@@ -402,26 +405,29 @@ section {
 }
 
 hr {
-	justify-content: center;
 	width: 100px;
 	opacity: 0.2;
+	justify-content: center;
 }
 
 .offers {
 	max-width: 90vw;
 	min-height: 100vh;
 	margin: 2em 6em;
-	margin-bottom: 8em;
-	padding-top: 40px;
 	padding: 20px 0;
-
+	padding-top: 40px;
+	margin-bottom: 8em;
+	margin-top: 4em;
 	&__title {
 		margin-top: 2em;
 		margin-bottom: 2em;
 		text-align: center;
-		font-size: 2.8em;
+		font-size: 2em;
+		letter-spacing: 0.2em;
 		text-transform: uppercase;
+		font-weight: 900;
 	}
+
 	.cards {
 		display: flex;
 		justify-content: space-around;
@@ -429,15 +435,16 @@ hr {
 
 		.card {
 			width: 28em;
-			margin-bottom: 40px;
 			margin-left: 0.5em;
 			margin-right: 0.5em;
+			margin-bottom: 40px;
 			border-radius: 3px;
 			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-			transition: box-shadow 0.3s ease-in-out;
+			transition: box-shadow 0.3s ease-in-out, top 0.3s ease-in-out;
 			overflow: hidden;
 			background-color: $bg-color-dark;
 			border: none;
+			opacity: 1;
 			&__image {
 				display: flex;
 				position: relative;
@@ -457,6 +464,7 @@ hr {
 					z-index: 10000;
 				}
 			}
+
 			&__image::before {
 				content: "";
 				position: absolute;
@@ -465,32 +473,35 @@ hr {
 				width: 100%;
 				height: 100%;
 				background-color: $black-shadow;
-				/* czarny kolor z połowiczną przezroczystością */
-				pointer-events: none;
+				pointer-events: none; /* wyłączenie reakcji na zdarzenia myszy */
 			}
 
 			&__content {
-				padding: 20px;
+				padding: 2.5em;
 				text-align: justify;
 				cursor: auto;
 			}
+
 			&__title {
 				margin: 0 0 20px 0;
-				font-size: 24px;
+				font-size: 2em;
 				text-transform: uppercase;
 				color: $extra;
 			}
 
 			&__description {
 				margin: 0;
-				font-size: 16px;
+				font-size: 1em;
 				line-height: 1.5;
 				color: $text-light;
 			}
+			
 		}
-		.card:hover {
-			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-		}
+
+		// .card:hover {
+		// 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+		// 	background: #000;
+		// }
 	}
 }
 
@@ -592,7 +603,6 @@ hr {
 		text-transform: uppercase;
 		margin: 0;
 		background-image: url("/dist/img/contact2.webp");
-
 		background-size: cover;
 		background-position: right center;
 		background-clip: text;
@@ -603,7 +613,6 @@ hr {
 		position: absolute;
 		min-width: 30vw;
 		flex-direction: row;
-		// justify-content: center;
 		right: 0;
 		flex-wrap: wrap;
 		margin-top: 2.5em;
@@ -624,13 +633,10 @@ hr {
 			font-weight: 200;
 			color: $text-light;
 			letter-spacing: 0.18em;
-			// box-shadow: 0 0 0 1px #00000026;
-
 			.title {
 				padding-bottom: 1em;
 				text-align: center;
 				font-size: 1.6em;
-
 				text-transform: uppercase;
 			}
 			img {
@@ -759,9 +765,7 @@ hr {
 		padding: 2em;
 		width: clamp(30em, 40vw, 80vw);
 		height: clamp(16vh, 2vh, 40vh);
-
 		text-align: center;
-
 		background-color: $extraLight;
 		border-radius: 3px;
 		border: 1px solid $extra;
@@ -875,7 +879,7 @@ footer {
 	}
 }
 
-@media (min-width: 1040px) {
+@media (min-width: 900px) {
 	.header {
 		@include heroImages2("./../../dist/img/newheader7.webp");
 		height: 110vh;
@@ -889,6 +893,16 @@ footer {
 		hr {
 			width: 45%;
 		}
+	}
+	.hr2 {
+		background-color: $extra;
+		width: 1vw;
+		height: 5px;
+		border-radius: 5px;
+		color: $extra;
+		opacity: 0.8;
+		box-shadow: 0 0 5px $extraLight;
+		transition: width 4s;
 	}
 
 	.contact {
@@ -936,6 +950,7 @@ footer {
 			padding: 0em;
 		}
 	}
+
 	.projects {
 		display: none;
 	}
@@ -949,7 +964,6 @@ footer {
 		font-size: 0.7em;
 		line-height: 1.6em;
 		color: $text-light;
-
 		padding: 1em auto;
 		&__title {
 			position: absolute;
@@ -965,13 +979,12 @@ footer {
 			max-height: 3em;
 			text-transform: uppercase;
 			margin: 1em 0;
-
 			background-image: url("/dist/img/contact2.webp");
 			background-position: top;
 			background-clip: text;
 			color: transparent;
 		}
-		.contact__box {
+		&__box {
 			width: 100%;
 			padding: 0.5em;
 			margin: 1em;
@@ -983,9 +996,7 @@ footer {
 			align-items: center;
 			right: 5px;
 			bottom: 0;
-
 			color: $text-light;
-
 			&-info {
 				position: absolute;
 				justify-content: center;
@@ -1001,7 +1012,6 @@ footer {
 				transform: translate(-50%);
 
 				.contact__items {
-					color: $text-light;
 					margin: 2em;
 					justify-items: center;
 					align-items: center;
@@ -1057,4 +1067,8 @@ footer {
 	.contact {
 		height: 110vh;
 	}
+}
+.longAnima {
+	width: 70vw;
+	animation-delay: 50s;
 }

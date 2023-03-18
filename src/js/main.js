@@ -31,16 +31,17 @@ const handleObserver = () => {
 	const currentSection = window.scrollY
 
 	allSections.forEach(section => {
+		console.log(section)
 		if (
-			section.classList.contains("white-section") &&
-			section.offsetTop <= currentSection + 60
+			section.classList.contains("black-section") &&
+			section.offsetTop <= currentSection + 0
 		) {
-			navBtnBars.classList.add("black-bars-color")
+			navBtnBars.classList.add("white-bars-color")
 		} else if (
-			!section.classList.contains("white-section") &&
-			section.offsetTop <= currentSection + 60
+			!section.classList.contains("black-section") &&
+			section.offsetTop <= currentSection + 0
 		) {
-			navBtnBars.classList.remove("black-bars-color")
+			navBtnBars.classList.remove("white-bars-color")
 		}
 	})
 }

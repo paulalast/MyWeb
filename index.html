@@ -55,25 +55,25 @@
             <a href="#contact" class="nav__item">Contact</a>
         </div>
     </nav>
-    <header class="header section">
+    <header class="header section black-section">
         <h1 class="header__heading">CodeLast </h1>
         <hr>
-        <p class="header__text">WebDeveloper |&nbsp;Paulina&nbsp;Łastowiecka</p>
+        <p class="header__text">Twórca stron internetowych</p>
         <a href="#aboutme" class="header__btn btn-special-animation">About
             Me</a>
     </header>
     <main>
 
-        <section id="aboutme" class="about">
-            <div class="about__img">
+        <section id="aboutme" class="about section animate__animated">
+            <div class="about__img animate__animated"
+                data-animation="animate__fadeInLeft">
                 <img src="../dist/img/about.webp" width="320px" loading="lazy"
-                    height="560px" alt="working woman" id="portraitIMG"
-                    class="animate__animated">
+                    height="560px" alt="working woman" id="portraitIMG">
             </div>
-            <div class="about__text">
-                <h2 class="about__text-title ">About
-                    Me</h2>
-                <p class="about__text-info animate__animated">
+            <div class="about__text animate__animated"
+                data-animation="animate__fadeInRight">
+                <h2 class="about__text-title ">About Me ...</h2>
+                <p class="about__text-info">
                     Hi there! I’m Paulina - a junior <strong>Web
                         Developer</strong> with a
                     front-end development focus. I’m passionate about building
@@ -102,10 +102,12 @@
                 </p>
             </div>
         </section>
-        <section id="offers" class="offers">
-            <h2 class="offers__title">Offer</h2>
+        <hr class="hr2" id="hr2" data-animation="longAnima">
+        <section id="offers" class="offers section">
+            <h2 class="offers__title">Discover My Solutions</h2>
             <div class="cards">
-                <div class="card" id="card1">
+                <div class="card animate__animated" id="card1"
+                    data-animation="animate__fadeInUp">
                     <div class="card__image">
                         <img src="/dist/img/responsive.webp"
                             alt="Responsive Design">
@@ -123,7 +125,8 @@
                             grows your business.</p>
                     </div>
                 </div>
-                <div class="card" id="card2">
+                <div class="card animate__animated animate__delay-1s"
+                    id="card2" data-animation="animate__fadeInUp">
                     <div class="card__image">
                         <img src="/dist/img/seo.webp" alt="SEO">
                     </div>
@@ -140,7 +143,8 @@
                             competition.</p>
                     </div>
                 </div>
-                <div class="card" id="card3">
+                <div class="card animate__animated animate__delay-2s"
+                    id="card3" data-animation="animate__fadeInUp">
                     <div class="card__image">
                         <img src="/dist/img/webdesign.webp" alt="Web Design">
                     </div>
@@ -163,7 +167,7 @@
         </section>
 
 
-        <section id="contact" class="contact">
+        <section id="contact" class="contact section black-section">
             <h2 class="contact__title">
                 Get in <br> touch!
             </h2>
@@ -172,6 +176,7 @@
                 <div class="contact__box-info">
                     <p class="address contact__items"><img
                             src="/dist/img/icons/address.png" alt="">Warsaw
+                        Poland
                     </p>
                     <a href="tel:+48720834333" class="contact__items"
                         rel="noopener" target="_blank">
