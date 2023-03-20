@@ -31,7 +31,6 @@ const handleObserver = () => {
 	const currentSection = window.scrollY
 
 	allSections.forEach(section => {
-		console.log(section)
 		if (
 			section.classList.contains("black-section") &&
 			section.offsetTop <= currentSection + 0

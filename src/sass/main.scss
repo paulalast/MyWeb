@@ -495,7 +495,6 @@ hr {
 				line-height: 1.5;
 				color: $text-light;
 			}
-			
 		}
 
 		// .card:hover {
@@ -772,7 +771,7 @@ hr {
 		left: 50%;
 		top: 100px;
 		transform: translate(-50%, 0%);
-		color: $pure-white;
+		color: $text-dark;
 		z-index: 10000;
 		font-size: 1.2em;
 		box-shadow: 1px 1px 4px $popup-box-shadow-color;
@@ -1071,4 +1070,12 @@ footer {
 .longAnima {
 	width: 70vw;
 	animation-delay: 50s;
+}
+.card {
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.card.visible {
+	opacity: 1;
 }
