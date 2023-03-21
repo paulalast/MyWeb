@@ -559,7 +559,7 @@
     "reduce-function-call": "^1.0.3",
     "regenerate": "^1.4.2",
     "regenerate-unicode-properties": "^9.0.0",
-    "regenerator-runtime": "^0.13.9",
+    "regenerator-runtime": "^0.13.11",
     "regenerator-transform": "^0.14.5",
     "regex-not": "^1.0.2",
     "regexpu-core": "^4.8.0",
