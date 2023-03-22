@@ -1,135 +1,82 @@
-import "regenerator-runtime/runtime"
-
-const username = document.querySelector("#username")
-const email = document.querySelector("#email")
-const message = document.querySelector("#textarea")
-const popup = document.querySelector(".form__popup")
+const form = document.querySelector("#contact-form")
+const popup = document.querySelector("#popup")
 const closeBtn = document.querySelector(".form__popup-close")
+const sendBtn = document.querySelector(".send")
 
-document.getElementById("contact-form").addEventListener("submit", e => {
+form.addEventListener("submit", function (e) {
 	e.preventDefault()
-	checkForm([username, email, message])
-	checkLength(username, 2)
-	checkEmail(email)
-	checkErrors()
+	e.stopPropagation()
+
+	const username = document.querySelector("#username")
+	const email = document.querySelector("#email")
+	const textarea = document.querySelector("#textarea")
+
+	let isValid = true
+
+	if (username.value.trim() === "") {
+		showError(username, "Imię jest wymagane.")
+		isValid = false
+	} else {
+		clearError(username)
+	}
+
+	if (email.value.trim() === "") {
+		showError(email, "E-mail jest wymagany.")
+		isValid = false
+	} else if (!isValidEmail(email.value.trim())) {
+		showError(email, "Nieprawidłowy format adresu e-mail.")
+		isValid = false
+	} else {
+		clearError(email)
+	}
+
+	if (textarea.value.trim() === "") {
+		showError(textarea, "Wiadomość jest wymagana.")
+		isValid = false
+	} else {
+		clearError(textarea)
+	}
+
+	if (isValid) {
+		const formData = new FormData()
+		formData.append("username", username.value.trim())
+		formData.append("email", email.value.trim())
+		formData.append("textarea", textarea.value.trim())
+
+		axios
+			.post("contact-form-handler.php", formData)
+			.then(response => {
+				popup.style.display = "block"
+				form.reset()
+			})
+			.catch(error => {
+				console.error(error)
+				alert("Wystąpił błąd podczas wysyłania formularza.")
+			})
+	}
 })
 
-const showError = (input, msg) => {
+closeBtn.addEventListener("click", () => {
+	popup.style.display = "none"
+})
+
+const showError = (input, message) => {
 	const formBox = input.parentElement
-	const errorMsg = formBox.querySelector(".error-text")
+	const errorText = formBox.querySelector(".error-text")
 
 	formBox.classList.add("error")
-	errorMsg.textContent = msg
+	errorText.innerText = message
 }
 
 const clearError = input => {
 	const formBox = input.parentElement
+	const errorText = formBox.querySelector(".error-text")
+
 	formBox.classList.remove("error")
+	errorText.innerText = ""
 }
 
-const checkForm = input => {
-	input.forEach(input => {
-		if (input.value === "") {
-			showError(input, input.placeholder)
-		} else {
-			clearError(input)
-		}
-	})
+const isValidEmail = email => {
+	const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+	return regex.test(email)
 }
-
-const checkLength = (input, min) => {
-	if (input.value.length < min) {
-		showError(
-			input,
-			`${input.previousElementSibling.innerText.slice(
-				0,
-				-1
-			)} must be at least ${min} characters long.`
-		)
-	}
-}
-
-const checkEmail = email => {
-	const re =
-		/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-
-	if (re.test(email.value)) {
-		clearError(email)
-	} else {
-		showError(email, "The email is invalid.")
-	}
-}
-
-const checkErrors = () => {
-	const allInputs = document.querySelectorAll(".form-box")
-	let errorCount = 0
-
-	allInputs.forEach(input => {
-		if (input.classList.contains("error")) {
-			errorCount++
-		}
-	})
-
-	if (errorCount === 0) {
-		popup.classList.add("show-popup")
-		username.value = ""
-		email.value = ""
-		message.value = ""
-		return true
-	} else {
-		return false
-	}
-}
-
-const closePopup = () => {
-	popup.classList.remove("show-popup")
-	const allInputs = document.querySelectorAll(".form-box")
-}
-
-closeBtn.addEventListener("click", closePopup)
-document
-	.getElementById("contact-form")
-	.addEventListener("submit", async function (event) {
-		event.preventDefault()
-
-		checkForm([username, email, message])
-		checkLength(username, 2)
-		checkEmail(email)
-		if (!checkErrors()) {
-			try {
-				const response = await fetch("../../contact-form-handler.php", {
-					method: "POST",
-					headers: {
-						"Content-Type": "application/x-www-form-urlencoded",
-					},
-					body: new URLSearchParams({
-						username: username.value,
-						email: email.value,
-						textarea: message.value,
-					}),
-				})
-
-				if (response.ok) {
-					const responseData = await response.text()
-					if (responseData === "Dziękuję! Twoja wiadomość została wysłana.") {
-						popup.classList.add("show-popup")
-						username.value = ""
-						email.value = ""
-						message.value = ""
-					} else {
-						alert(
-							"Wystąpił problem z wysłaniem Twojej wiadomości. Proszę spróbować ponownie."
-						)
-					}
-				} else {
-					alert(
-						"Wystąpił problem z wysłaniem Twojej wiadomości. Proszę spróbować ponownie."
-					)
-				}
-			} catch (error) {
-				alert(
-					"Wystąpił problem z wysłaniem Twojej wiadomości. Proszę spróbować ponownie."
-				)
-			}
-		}
-	})

@@ -107,7 +107,6 @@
     "camelcase-keys": "^2.1.0",
     "caniuse-api": "^1.6.1",
     "caniuse-db": "^1.0.30001287",
-    "caniuse-lite": "^1.0.30001287",
     "caw": "^2.0.1",
     "chalk": "^4.1.2",
     "chokidar": "^2.1.8",

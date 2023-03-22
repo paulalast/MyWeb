@@ -6,38 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0e1f2a">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="./dist/img/favicon_io/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
         rel="stylesheet">
-    <!-- <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script> -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 
     <script src="/node_modules/regenerator-runtime/runtime.js"></script>
-
-
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <!-- <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-
-
-
-    <link rel="stylesheet" href="/dist/css/main.min.css" async>
+    <link rel="stylesheet" href="/dist/css/main.min.css">
+    <meta name="robots" content="index, follow">
     <title>CodeLast| WebDev</title>
-    <meta name="description" content="WebDeveloper Warszawa">
+    <meta name="author" content="Paulina Łastowiecka">
+    <meta name="description"
+        content="CodeLast to profesjonalne usługi tworzenia stron internetowych w Warszawie. Oferujemy atrakcyjny design, optymalizację SEO i spójność z marką. Skontaktuj się z nami już dziś!">
     <meta name="keywords"
         content="tworzenie stron internetowych mazowieckie, warszawa, piastów, seo">
 </head>
@@ -64,7 +53,6 @@
         <a href="#aboutme" class="header__btn btn-special-animation">O mnie</a>
     </header>
     <main>
-
         <section id="aboutme" class="about section animate__animated">
             <div class="about__img animate__animated"
                 data-animation="animate__fadeInLeft">
@@ -98,8 +86,6 @@
                     Razem możemy stworzyć stronę internetową, która nie tylko
                     będzie estetyczna, ale również funkcjonalna i wspierająca w
                     osiąganiu Twoich celów.
-
-
                 </p>
             </div>
         </section>
@@ -114,7 +100,7 @@
                             alt="Responsive Design">
                     </div>
                     <div class="card__content">
-                        <h3 class="card__title">Responsive Design</h3>
+                        <h3 class="card__title">Responsywne strony</h3>
                         <p class="card__description">Tworzę strony internetowe,
                             które automatycznie dostosowują się do różnych
                             rozmiarów ekranów, zapewniając spójne i
@@ -135,13 +121,15 @@
                         <img src="/dist/img/seo.webp" alt="SEO">
                     </div>
                     <div class="card__content">
-                        <h3 class="card__title">SEO</h3>
-                        <p class="card__description">Tworząc strony, dbam o to,
-                            aby były odpowiednio przygotowane dla wyszukiwarek
-                            internetowych. Współpracując ze mną, możesz być
-                            pewien, że Twoja strona będzie działać sprawnie,
-                            trafiając do właściwej grupy odbiorców poprzez dobrą
-                            pozycję w wynikach wyszukiwania. </p>
+                        <h3 class="card__title">Indywidualne podejście</h3>
+                        <p class="card__description"> Zapewniam profesjonalną i
+                            elastyczną obsługę, aby dostosować moje usługi do
+                            indywidualnych potrzeb klientów. Moje usługi
+                            obejmują projektowanie i budowanie stron
+                            internetowych, integrację z innymi narzędziami,
+                            optymalizację SEO oraz zarządzanie treścią. Stawiam
+                            na jakość i dokładność w pracy, aby zapewnić
+                            najlepsze efekty dla moich klientów. </p>
                     </div>
                 </div>
                 <div class="card animate__animated animate__delay-2s" id="card3"
@@ -150,7 +138,7 @@
                         <img src="/dist/img/webdesign.webp" alt="Web Design">
                     </div>
                     <div class="card__content">
-                        <h3 class="card__title">Creative Web Design
+                        <h3 class="card__title">Kreatywny <br> design
                         </h3>
                         <p class="card__description">Twoja strona internetowa
                             jest wirtualną wizytówką Twojej firmy. Warto więc
@@ -166,29 +154,34 @@
                     </div>
                 </div>
             </div>
+            <p class="more__info animate__animated animate__delay-2s"
+                data-animation="animate__fadeInUp">Jeśli potrzebujesz
+                szczegółów lub chcesz
+                omówić swoje
+                wymagania i oczekiwania, zapraszam do kontaktu ze mną
+                poprzez adres e-mail. Jestem gotowa odpowiedzieć na Twoje
+                pytania i przedstawić szczegóły mojej oferty. Dziękuję za
+                zainteresowanie moimi usługami i czekam na <a
+                    href="#contact">kontakt</a>!</p>
         </section>
-
-
         <section id="contact" class="contact section black-section">
             <h2 class="contact__title">
                 GET IN <br> TOUCH!
             </h2>
             <div class="contact__box">
-
                 <div class="contact__box-info">
-                    <p class="address contact__items"><img
-                            src="/dist/img/icons/address.png" alt="">Warszawa
+                    <p class="contact__items address"><img
+                            src="/dist/img/icons/address.png"
+                            alt=" adress icon">Warszawa
                     </p>
                     <a href="tel:+48720834333" class="contact__items"
                         rel="noopener" target="_blank">
-                        <img src="/dist/img/icons/phone.png" alt="">
+                        <img src="/dist/img/icons/phone.png" alt="phone icon">
                         +48720834333</a>
-                    <p class="email contact__items"><img
+                    <p class="contact__items email"><img
                             src="/dist/img/icons/email.png"
-                            alt="">paulina@codelast.tech
+                            alt="email icon">paulina@codelast.tech
                     </p>
-
-
                     <form id="contact-form" class="contact__box-form"
                         action="contact-form-handler.php" method="post">
                         <div class="form-box">
@@ -196,7 +189,6 @@
                             <input type="text" id="username" name="username"
                                 placeholder="Jak się nazywasz?">
                             <p class="error-text"></p>
-
                         </div>
                         <div class="form-box">
                             <label for="email">E-mail:</label>
@@ -204,7 +196,6 @@
                                 placeholder="Wpisz swój adres mailowy:">
                             <p class="error-text"></p>
                         </div>
-
                         <div class="form-box">
                             <label for="text">Wiadomość:</label>
                             <textarea id="textarea" name="textarea"
@@ -212,40 +203,29 @@
                                 rows="10"></textarea>
                             <p class="error-text"></p>
                         </div>
-
-
-
                         <p class="rodo">
                             Wypełnienie formularza oznacza, że podane w nim dane
                             osobowe będą przetwarzane w celu udzielenia
                             odpowiedzi. Jeśli Twoje zapytanie dotyczy naszych
                             usług, w odpowiedzi możemy przedstawić Ci ofertę.
-                            Dowiedz się więcej o tym, <a href="#rodo"> jak
+                            Dowiedz się więcej o tym, <a target="_blank"
+                                href="_rodo.html"> jak
                                 przetwarzamy Twoje dane osobowe.
                             </a></p>
                         <button type="submit"
                             class="send btn-special-animation">Wyślij</button>
                     </form>
-
-
-
                 </div>
-                <div class="form__popup">
+                <div id="popup" class="form__popup">
                     <p class="form__popup-msg"> Twoja wiadomość została wysłana.
-                        Wkrótce się z Tobą skontaktuję! 🙂
+                        Wkrótce się z Tobą skontaktuję! <br> 🙂
                         <br>
                         <button
                             class="form__popup-close btn-special-animation">Zamknij</button>
                 </div>
-
             </div>
         </section>
-
-
     </main>
-
-
-
     <footer>
         <div class="footer">
 
@@ -253,32 +233,14 @@
                 </span>
                 Paulina Łastowiecka - WebDeveloper</p>
             <p class="nip"> NIP: 5342644424 | REGON: 520314196</p>
-
         </div>
-
     </footer>
-
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/regenerator-runtime/0.13.11/regenerator-runtime.min.js"></script>
-
-    <!-- <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script> -->
-
-    <!-- <script async src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/dist/js/functions.min.js"></script>
     <script src="/dist/js/main.min.js"></script>
     <script src="/dist/js/anima.min.js"></script>
-
-    <!-- <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous" async></script> -->
-
-
-
-    <!-- <script src="node_modules/swiper/swiper-bundle.min.js" async></script> -->
-
 </body>
 
 </html>

@@ -1,0 +1,78 @@
+@import "./colors";
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	text-decoration: none;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: "Lato", sans-serif;
+	font-size: 1.6rem;
+	background-color: $bg-color;
+}
+
+.rodo__box {
+	display: flex;
+	flex-direction: column;
+	max-width: 60vw;
+	margin: 2em;
+	border-radius: 5px;
+	padding: 2em;
+	box-shadow: 0 0 5px $popup-box-shadow-color;
+	letter-spacing: 0.08em;
+	h1 {
+		text-align: center;
+		font-size: 2em;
+		color: $extra;
+		margin-bottom: 1em;
+	}
+
+	h2 {
+		font-size: 1.2em;
+		color: $extraLight;
+		margin-top: 0.1em;
+		margin-bottom: 0.1em;
+	}
+
+	p {
+		padding-left: 1.5em;
+		margin-bottom: .5em;
+		line-height: 1.5em;
+	}
+
+	ul {
+		list-style: square;
+		margin-bottom: .5em;
+		margin-left: 1em;
+	}
+
+	li {
+		margin-bottom: 1em;
+	}
+}
+
+@media (max-width: 800px) {
+	.rodo__box {
+		min-width: 80vw;
+		h1 {
+			font-size: 1.2em;
+		}
+		h2 {
+			font-size: 1em;
+		}
+		p {
+			font-size: 0.9em;
+		}
+		ul {
+			margin-left: 0em;
+		}
+		li {
+			margin-left: 0;
+			font-size: 0.7em;
+		}
+	}
+}
