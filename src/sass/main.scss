@@ -448,13 +448,13 @@ hr {
 				display: inline-block;
 				align-items: center;
 				justify-content: center;
-				height: 350px;
+				height: 300px;
 				overflow: hidden;
 				object-fit: fill;
 				background-color: $bg-color-dark;
 
 				img {
-					width: 100%;
+					width: 500px;
 					min-height: 100%;
 					object-fit: cover;
 					border: none;
@@ -555,8 +555,7 @@ hr {
 			width: 100%;
 
 			img {
-				width: 60px;
-				padding: 1em;
+				margin-right: 1em;
 			}
 		}
 		.contact__box-form {

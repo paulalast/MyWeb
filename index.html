@@ -2,34 +2,42 @@
 <html lang="pl">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0e1f2a">
-    <link rel="shortcut icon" type="image/x-icon"
-        href="./dist/img/favicon_io/favicon.ico">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
-        rel="stylesheet">
-
-    <script src="/node_modules/regenerator-runtime/runtime.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-    <link rel="stylesheet" href="/dist/css/main.min.css">
     <meta name="robots" content="index, follow">
-    <title>CodeLast| WebDev</title>
     <meta name="author" content="Paulina Łastowiecka">
     <meta name="description"
         content="CodeLast to profesjonalne usługi tworzenia stron internetowych w Warszawie. Oferujemy atrakcyjny design, optymalizację SEO i spójność z marką. Skontaktuj się z nami już dziś!">
     <meta name="keywords"
         content="tworzenie stron internetowych mazowieckie, warszawa, piastów, seo">
+
+    <title>CodeLast| WebDev</title>
+
+    <link rel="shortcut icon" type="image/x-icon"
+        href="./dist/img/favicon_io/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+        as="style">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/dist/css/main.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+        defer></script>
 </head>
+
+
 
 <body>
     <button class="burger-btn" aria-label="Right Align">
@@ -96,8 +104,8 @@
                 <div class="card animate__animated" id="card1"
                     data-animation="animate__fadeInUp">
                     <div class="card__image">
-                        <img src="/dist/img/responsive.webp"
-                            alt="Responsive Design">
+                        <img src="/dist/img/responsive.webp" width="300"
+                            height="200" alt="Responsive Design">
                     </div>
                     <div class="card__content">
                         <h3 class="card__title">Responsywne strony</h3>
@@ -118,7 +126,8 @@
                 <div class="card animate__animated animate__delay-1s" id="card2"
                     data-animation="animate__fadeInUp">
                     <div class="card__image">
-                        <img src="/dist/img/seo.webp" alt="SEO">
+                        <img src="/dist/img/seo.webp" width="300" height="200"
+                            alt="SEO">
                     </div>
                     <div class="card__content">
                         <h3 class="card__title">Indywidualne podejście</h3>
@@ -135,7 +144,8 @@
                 <div class="card animate__animated animate__delay-2s" id="card3"
                     data-animation="animate__fadeInUp">
                     <div class="card__image">
-                        <img src="/dist/img/webdesign.webp" alt="Web Design">
+                        <img src="/dist/img/webdesign.webp" width="300"
+                            height="200" alt="Web Design">
                     </div>
                     <div class="card__content">
                         <h3 class="card__title">Kreatywny <br> design
@@ -171,16 +181,17 @@
             <div class="contact__box">
                 <div class="contact__box-info">
                     <p class="contact__items address"><img
-                            src="/dist/img/icons/address.png"
-                            alt=" adress icon">Warszawa
+                            src="/dist/img/icons/address.png" width="32"
+                            height="32" alt=" adress icon">Warszawa
                     </p>
                     <a href="tel:+48720834333" class="contact__items"
                         rel="noopener" target="_blank">
-                        <img src="/dist/img/icons/phone.png" alt="phone icon">
+                        <img src="/dist/img/icons/phone.png" width="32"
+                            height="32" alt="phone icon">
                         +48720834333</a>
                     <p class="contact__items email"><img
-                            src="/dist/img/icons/email.png"
-                            alt="email icon">paulina@codelast.tech
+                            src="/dist/img/icons/email.png" width="32"
+                            height="32" alt="email icon">paulina@codelast.tech
                     </p>
                     <form id="contact-form" class="contact__box-form"
                         action="contact-form-handler.php" method="post">
@@ -236,7 +247,8 @@
         </div>
     </footer>
     <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/regenerator-runtime/0.13.11/regenerator-runtime.min.js"></script>
+        src="https://cdnjs.cloudflare.com/ajax/libs/regenerator-runtime/0.13.11/regenerator-runtime.min.js"
+        defer></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/dist/js/functions.min.js"></script>
     <script src="/dist/js/main.min.js"></script>
