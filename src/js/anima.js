@@ -13,7 +13,7 @@ $(window).scroll(function () {
 			"animate__animated animate__fadeInRight animate__slow"
 		)
 	}
-	if (scrollPosition > offersPosition - windowHeight + 100) {
+	if (scrollPosition > offersPosition - windowHeight + 50) {
 		$("#card1").addClass(
 			"animate__animated animate__fadeInUp animate__slow animate__delay-1s "
 		)

@@ -232,7 +232,7 @@ section {
 	&__text {
 		text-align: center;
 		font-size: 3rem;
-		font-weight: 100;
+		font-weight: 300;
 		text-shadow: 0px 2px 4px $dark;
 	}
 
@@ -533,6 +533,7 @@ hr {
 		background-size: cover;
 		background-clip: text;
 		color: transparent;
+		color: $extra;
 		text-align: center;
 		line-height: 1em;
 		font-weight: 900;
@@ -648,20 +649,21 @@ hr {
 	}
 
 	.form__popup {
-		display: none;
+		display: block;
 		position: absolute;
 		flex-direction: column;
 		left: 50%;
-		top: 50%;
+		top: -500%;
 		transform: translate(-50%, -50%);
 		width: 20em;
 		margin: 1em;
 		padding: 2em;
 		border-radius: 3px;
-		background-color: $extra;
+		background-color: $bg-color-dark;
 		z-index: 10000;
 		text-align: center;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		border: 1px solid $extra;
+		box-shadow: 0px 0px 10px 4px $extra;
 
 		&-msg {
 			color: $text-light;
@@ -669,7 +671,6 @@ hr {
 		}
 		&-close {
 			display: flex;
-			bottom: 0;
 			left: 50%;
 			padding: 0.8em 2em;
 			justify-content: center;
@@ -685,7 +686,7 @@ hr {
 			border: none;
 			border-radius: 3px;
 			cursor: pointer;
-			box-shadow: 2px 3px 5px rgb(97, 78, 78);
+			box-shadow: 2px 3px 5px rgb(97, 87, 78);
 			&::before {
 				content: "";
 				position: absolute;
@@ -702,13 +703,14 @@ hr {
 		&-close:hover {
 			color: $text-light;
 			z-index: 10;
+			border-radius: 3px;
 			&::before {
 				opacity: 1;
 			}
 		}
 	}
 	.show-popup {
-		display: block;
+		top: 50%;
 	}
 }
 footer {
@@ -722,7 +724,6 @@ footer {
 	color: $text-light;
 	z-index: 100;
 	margin-bottom: 0;
-	// margin-top: 4em;
 
 	.footer {
 		border-top: 2px solid $extra;
@@ -730,7 +731,6 @@ footer {
 		flex-direction: column;
 		padding: 0.3em;
 		background-color: $bg-color-dark;
-
 		z-index: 1000;
 		width: 100%;
 
@@ -739,8 +739,6 @@ footer {
 			font-weight: 300;
 			letter-spacing: 0.2em;
 			color: $text-light;
-
-			// text-shadow: 0.7px 0.5px 1px rgb(15, 15, 15);
 		}
 		span {
 			font-weight: 300;
@@ -758,6 +756,7 @@ footer {
 			text-align: center;
 			justify-content: center;
 			font-size: 1em;
+			padding-bottom: 1em;
 		}
 	}
 }
