@@ -15,16 +15,16 @@ $(window).scroll(function () {
 	}
 	if (scrollPosition > offersPosition - windowHeight + 50) {
 		$("#card1").addClass(
-			"animate__animated animate__fadeInUp animate__slow animate__delay-1s "
+			"animate__animated animate__fadeInUp animate__slow "
 		)
 		$("#card2").addClass(
-			"animate__animated animate__fadeInUp  animate__delay-2s"
+			"animate__animated animate__fadeInUp  animate__delay-1s"
 		)
 		$("#card3").addClass(
-			"animate__animated animate__fadeInUp  animate__delay-3s"
+			"animate__animated animate__fadeInUp  animate__delay-2s"
 		)
 		$(".more__info").addClass(
-			"animate__animated animate__fadeIn  animate__delay-4s animate__slower"
+			"animate__animated animate__fadeIn  animate__delay-3s animate__slower"
 		)
 		$(".hr2").addClass("hr2 longAnima")
 	}

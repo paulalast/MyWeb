@@ -87,7 +87,7 @@ section {
 	border: 1px solid transparent;
 	padding: 1em;
 	cursor: pointer;
-	z-index: 1000;
+	z-index: 10000;
 	border-radius: 3px;
 
 	&__box {
@@ -133,7 +133,7 @@ section {
 
 .nav {
 	position: fixed;
-	z-index: 100000000;
+	z-index: 1000000000000;
 	top: 0;
 	display: flex;
 	justify-content: center;
@@ -143,7 +143,7 @@ section {
 	transform: translateX(100%);
 	transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
 	background-image: $nav-gradient-solid;
-	z-index: 100;
+	z-index: 1000;
 	font-weight: 500;
 
 	&--active {
@@ -159,7 +159,7 @@ section {
 		font-size: 2.8rem;
 		color: $text-dark;
 		text-decoration: none;
-		z-index: 10000000000;
+		z-index: 10000;
 		&::before {
 			position: absolute;
 			top: 0;
@@ -212,35 +212,60 @@ section {
 		font-family: "Lato", sans-serif;
 		font-size: 4.5rem;
 		font-weight: 900;
-		letter-spacing: 0.15em;
+		letter-spacing: 0.015em;
 		text-shadow: 3px 2px 3px $dark;
 		overflow: hidden;
 		white-space: wrap;
 		margin: 0 auto;
+		padding: 10px 25px;
 		opacity: 0;
 		animation: fadeIn 2s ease-in-out forwards;
 		text-align: center;
+		z-index: 10;
+
+		&::before {
+			display: inline-block;
+			position: absolute;
+			content: " ";
+			left: 0px;
+			opacity: 0.7;
+			bottom: 0;
+			margin: 0;
+			width: 100%;
+			height: 7%;
+			border-radius: 3px;
+			background-color: $extra;
+			z-index: -10000;
+			transition: height 1s;
+		}
+		&:hover {
+			&::before {
+				height: 120px;
+				cursor: pointer;
+			}
+		}
 	}
 
 	hr {
 		margin: 0.5em;
 		width: 300px;
 		border: 0.1px solid $pure-white;
-		opacity: 0.3;
+		opacity: 0;
 	}
 
 	&__text {
-		text-align: center;
+		text-align: left;
 		font-size: 3rem;
 		font-weight: 300;
 		text-shadow: 0px 2px 4px $dark;
+		opacity: 0.9;
 	}
 
 	&__btn {
 		display: flex;
 		position: relative;
 		top: 180px;
-		padding: 1em 2em;
+		padding: 1.2em 3em;
 		font-size: 1.6rem;
 		font-weight: 900;
 		letter-spacing: 0.1em;
@@ -347,7 +372,7 @@ section {
 		top: -20px;
 		left: 40px;
 		border-radius: 3px;
-		background: #d9d9d944;
+		background: #2b2b2d08;
 		padding: 1.5em;
 		img {
 			position: relative;
@@ -357,7 +382,7 @@ section {
 			filter: saturate(0.7);
 			border: outset 0px solid $dark;
 			border-radius: 3px;
-			box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.425);
+			box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.033);
 		}
 	}
 
@@ -397,8 +422,16 @@ section {
 			line-height: 1.3em;
 			border-radius: 3px;
 
-			strong {
+			strong,
+			a {
 				color: $extra;
+				font-weight: bold;
+				transition: color 0.3s;
+			}
+			.extra-portfolio:hover {
+				a {
+					color: #e09f3e9d;
+				}
 			}
 		}
 	}
@@ -450,7 +483,7 @@ hr {
 				justify-content: center;
 				height: 300px;
 				overflow: hidden;
-				object-fit: fill;
+				object-fit: cover;
 				background-color: $bg-color-dark;
 
 				img {
@@ -459,6 +492,10 @@ hr {
 					object-fit: cover;
 					border: none;
 					z-index: 10000;
+					transition: transform 0.3s ease-in-out;
+					&:hover {
+						transform: scale(1.15);
+					}
 				}
 			}
 
@@ -471,6 +508,7 @@ hr {
 				height: 100%;
 				background-color: $black-shadow;
 				pointer-events: none;
+				z-index: 10;
 			}
 
 			&__content {
@@ -527,23 +565,29 @@ hr {
 	align-items: center;
 	background-color: $bg-color-dark;
 	&__title {
+		position: relative;
 		margin: 1em;
 		font-size: 4.5rem;
-		background-image: url("/dist/img/contact2.webp");
-		background-size: cover;
-		background-clip: text;
-		color: transparent;
+		// background-image: url("/dist/img/contact.jpeg");
+		// background-size: 150%;
+		// background-position: top;
+		// background-clip: text;
+		// color: transparent;
 		color: $extra;
 		text-align: center;
 		line-height: 1em;
 		font-weight: 900;
 		text-transform: uppercase;
+		opacity: 0.9;
+		z-index: 10;
+		text-shadow: 3px 3px 1px $extraLight;
 	}
+
 	&__box-info {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
-		align-items: center;
+		align-items: flex-start;
 		padding: 1em;
 		color: $text-light;
 		a {
@@ -563,7 +607,8 @@ hr {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			width: 100%;
+			margin: 1.6rem;
+			width: 90%;
 
 			.form-box {
 				display: flex;
@@ -584,6 +629,7 @@ hr {
 				textarea {
 					border-radius: 3px;
 					padding: 1em;
+					resize: none;
 				}
 			}
 			.error {

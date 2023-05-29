@@ -21,7 +21,7 @@
     <title>CodeLast| WebDev</title>
 
     <link rel="shortcut icon" type="image/x-icon"
-        href="./dist/img/favicon_io/favicon.ico">
+        href="./dist/img/favicon_io2/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,12 +53,15 @@
             <a href="#aboutme" class="nav__item">O mnie</a>
             <a href="#offers" class="nav__item">Oferta</a>
             <a href="https://github.com/paulalast" target="_blank"
-                class="nav__item">Projekty</a>
+                class="nav__item">GitHub</a>
+            <a href="https://portfolio-pl.netlify.app/" target="_blank"
+                class="nav__item">Portfolio</a>
             <a href="#contact" class="nav__item">Kontakt</a>
         </div>
     </nav>
     <header class="header section black-section">
-        <h1 class="header__heading">CodeLast </h1>
+        <h1 class="header__heading"> <span class="header-span">Code</span>Last
+        </h1>
         <hr>
         <p class="header__text">Web Developer</p>
         <a href="#aboutme" class="header__btn btn-special-animation">O mnie</a>
@@ -73,32 +76,49 @@
             <div class="about__text animate__animated"
                 data-animation="animate__fadeInRight">
                 <h2 class="about__text-title ">O mnie ...</h2>
-                <p class="about__text-info">
-                    Cześć! Nazywam się Paulina i jestem <strong>Web
-                        Developerem </strong> , specjalizującym się w obszarze
-                    front-endu. Moim celem jest tworzenie nie tylko ładnych, lecz także użytecznych
-                    stron
-                    internetowych, które spełniają oczekiwania każdego klienta.
-                    Z racji mojego zainteresowania fotografią, zwracam uwagę na
-                    detale i estetykę w każdym projekcie. Doświadczenie zdobyte
-                    w social mediach oraz reklamie nauczyło mnie słuchać potrzeb
-                    klientów oraz kierować się ich celami.
-                    <br><br>
-                    Rozumiem, że każda firma jest inna, dlatego staram się
-                    dostosować podejście do indywidualnych wymagań moich
-                    klientów. Współpracując ze mną, możesz liczyć na
-                    zaangażowanie i chęć rozwijania się. Projektuję strony
-                    internetowe, które są przyjazne dla użytkowników i
-                    zoptymalizowane pod urządzenia mobilne, aby sprostać
-                    wyzwaniom dynamicznego rynku cyfrowego. Chętnie nawiążę
-                    współpracę, niezależnie od wielkości Twojego
-                    przedsiębiorstwa.
-                    <br><br>
-                    Razem możemy stworzyć stronę internetową, która nie tylko
-                    będzie estetyczna, ale również funkcjonalna i wspierająca w
-                    osiąganiu Twoich celów.
-                </p>
-            </div>
+                <div class="about__text-info">
+                    <p>
+                        Cześć! Nazywam się Paulina i jestem <strong>Web
+                            Developerem </strong> , specjalizującym się w
+                        obszarze
+                        front-endu. Moim celem jest tworzenie nie tylko ładnych,
+                        lecz także użytecznych
+                        stron
+                        internetowych, które spełniają oczekiwania każdego
+                        klienta.
+                        Z racji mojego zainteresowania fotografią, zwracam uwagę
+                        na
+                        detale i estetykę w każdym projekcie. Doświadczenie
+                        zdobyte
+                        w social mediach oraz reklamie nauczyło mnie słuchać
+                        potrzeb
+                        klientów oraz kierować się ich celami.
+                    </p>
+                    <p>
+                        Rozumiem, że każda firma jest inna, dlatego staram się
+                        dostosować podejście do indywidualnych wymagań moich
+                        klientów. Współpracując ze mną, możesz liczyć na
+                        zaangażowanie i chęć rozwijania się. Projektuję strony
+                        internetowe, które są przyjazne dla użytkowników i
+                        zoptymalizowane pod urządzenia mobilne, aby sprostać
+                        wyzwaniom dynamicznego rynku cyfrowego. Chętnie nawiążę
+                        współpracę, niezależnie od wielkości Twojego
+                        przedsiębiorstwa.
+                    </p>
+                    <p>
+                        Razem możemy stworzyć stronę internetową, która nie
+                        tylko
+                        będzie estetyczna, ale również funkcjonalna i
+                        wspierająca w
+                        osiąganiu Twoich celów.
+                    </p>
+                    <p> Zachęcam Cię
+                        również do odwiedzenia sekcji  <span class="extra-portfolio">
+                            <a href="https://portfolio-pl.netlify.app/"
+                                target="_blank"> PORTFOLIO</a>.
+                        </span></p>
+
+                </div>
         </section>
         <hr class="hr2" id="hr2" data-animation="longAnima">
         <section id="offers" class="offers section">
@@ -121,7 +141,8 @@
                             zdecydujesz się na responsywny design, Twoja strona
                             będzie ładować się szybciej, mieć niższy wskaźnik
                             odrzuceń oraz wyżej pozycjonować się w wynikach
-                            wyszukiwania na stronach wyszukiwarek.Stwórzmy razem
+                            wyszukiwania na stronach wyszukiwarek. Stwórzmy
+                            razem
                             stronę, która
                             reprezentuje Twoją firmę, angażuje Twoich odbiorców
                             i pomaga w rozwoju Twojego biznesu.</p>
@@ -178,6 +199,8 @@
                 poprzez formularz kontaktowy lub email. Jestem gotowa
                 odpowiedzieć na Twoje
                 pytania i przedstawić szczegóły mojej oferty.
+
+
                 <br>
                 Dziękuję za
                 zainteresowanie moimi usługami i czekam na <a
@@ -209,17 +232,19 @@
                         <div class="form-box">
                             <label for="username">Imię:</label>
                             <input type="text" id="username" name="username"
-                                placeholder="Jak się nazywasz?">
+                                placeholder="Jak się nazywasz?"
+                                autocomplete="given-name">
                             <p class="error-text"></p>
                         </div>
                         <div class="form-box">
                             <label for="email">E-mail:</label>
                             <input type="email" id="email" name="email"
-                                placeholder="Wpisz swój adres mailowy:">
+                                placeholder="Wpisz swój adres mailowy:"
+                                autocomplete="email">
                             <p class="error-text"></p>
                         </div>
                         <div class="form-box">
-                            <label for="text">Wiadomość:</label>
+                            <label for="textarea">Wiadomość:</label>
                             <textarea id="textarea" name="textarea"
                                 placeholder="W czym mogę Ci pomóc?" cols="20"
                                 rows="10"></textarea>
