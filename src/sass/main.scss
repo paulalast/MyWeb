@@ -1,6 +1,7 @@
 @import "./mixins";
 @import "./colors";
 @import "./animations";
+@import "./404";
 *,
 *::before,
 *::after {
@@ -254,11 +255,12 @@ section {
 	}
 
 	&__text {
-		text-align: left;
+		text-align: center;
 		font-size: 3rem;
-		font-weight: 300;
+		font-weight: 400;
 		text-shadow: 0px 2px 4px $dark;
 		opacity: 0.9;
+		text-transform: uppercase;
 	}
 
 	&__btn {
@@ -372,7 +374,7 @@ section {
 		top: -20px;
 		left: 40px;
 		border-radius: 3px;
-		background: #2b2b2d08;
+		// background: #2b2b2d08;
 		padding: 1.5em;
 		img {
 			position: relative;
@@ -382,7 +384,7 @@ section {
 			filter: saturate(0.7);
 			border: outset 0px solid $dark;
 			border-radius: 3px;
-			box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.033);
+			box-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
 		}
 	}
 
@@ -430,7 +432,7 @@ section {
 			}
 			.extra-portfolio:hover {
 				a {
-					color: #e09f3e9d;
+					color: $popup-box-shadow-color;
 				}
 			}
 		}
@@ -873,7 +875,9 @@ footer {
 	.header {
 		@include heroImages3("./../../dist/img/headerXS.webp");
 		.header__text {
-			font-weight: 100;
+			font-size: 2.5rem;
+			font-weight: 400;
+			text-align: center;
 		}
 	}
 	.about {
@@ -916,8 +920,14 @@ footer {
 	}
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
 	.offers {
+		.cards {
+			.card {
+				font-size: 1.2rem;
+				max-width: 97vw;
+			}
+		}
 		.more__info {
 			margin-right: 2em;
 			max-width: 80vw;

@@ -1,0 +1,61 @@
+.error-section {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0px;
+	animation: magic 2s 0.1s alternate;
+	.error-img {
+        display: flex;
+		width: 100%;
+		height: 100%;
+		opacity: 0.8;
+		padding: 7rem;
+		img {
+            width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.error-textbox {
+        color: $bg-color-dark;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		.error-title {
+			position: relative;
+			font-size: 12em;
+		}
+
+		.error-subtitle {
+			font-size: 4rem;
+			padding: 0.5em;
+		}
+		.error-link {
+			padding: 1em;
+			font-size: 2rem;
+			text-decoration: none;
+			font-weight: 500;
+			transition: color 0.3s;
+			span {
+				font-size: 2.5rem;
+			}
+		}
+		.error-link:hover {
+			color: $extra;
+		}
+	}
+}
+
+@keyframes magic {
+	0% {
+		left: -2000px;
+	}
+	100% {
+		left: 0;
+	}
+}
