@@ -62,7 +62,7 @@
     "async-settle": "^1.0.0",
     "atob": "^2.1.2",
     "autoprefixer": "^10.4.0",
-    "axios": "^0.21.4",
+    "axios": "^1.8.2",
     "babel-plugin-dynamic-import-node": "^2.3.3",
     "babel-plugin-polyfill-corejs2": "^0.3.0",
     "babel-plugin-polyfill-corejs3": "^0.4.0",
